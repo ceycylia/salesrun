@@ -1,0 +1,4 @@
+* {
+    scroll-snap-type: proximity;
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,987 @@
+ERROR - 2025-03-18 07:42:15 --> mysqli_sql_exception: Table 'projectsdm.settings' doesn't exist in engine in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#17 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#19 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#21 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#23 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#24 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#25 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#26 {main}
+CRITICAL - 2025-03-18 07:42:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'projectsdm.settings' doesn't exist in engine
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+15 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+16 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+17 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+18 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+19 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+20 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+22 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+23 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 07:42:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'projectsdm.settings' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 6 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 7 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+11 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+12 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+13 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+14 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+15 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+16 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+17 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+18 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+19 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+20 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+21 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+22 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+23 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+24 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+25 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 07:42:15 --> [Caused by] mysqli_sql_exception: Table 'projectsdm.settings' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 7 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 8 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+11 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+12 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+13 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+14 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+15 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+16 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+17 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+18 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+19 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+20 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+21 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+22 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+23 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+24 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+25 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+26 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-18 07:49:15 --> mysqli_sql_exception: Table 'projectsdm.settings' doesn't exist in engine in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#17 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#19 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#21 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#23 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#24 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#25 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#26 {main}
+CRITICAL - 2025-03-18 07:49:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'projectsdm.settings' doesn't exist in engine
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+15 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+16 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+17 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+18 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+19 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+20 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+22 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+23 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 07:49:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'projectsdm.settings' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 6 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 7 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+11 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+12 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+13 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+14 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+15 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+16 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+17 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+18 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+19 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+20 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+21 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+22 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+23 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+24 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+25 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 07:49:15 --> [Caused by] mysqli_sql_exception: Table 'projectsdm.settings' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 7 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 8 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+11 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+12 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+13 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+14 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+15 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+16 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+17 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+18 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+19 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+20 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+21 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+22 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+23 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+24 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+25 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+26 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-18 07:49:18 --> mysqli_sql_exception: Table 'projectsdm.settings' doesn't exist in engine in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#17 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#19 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#21 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#23 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#24 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#25 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#26 {main}
+CRITICAL - 2025-03-18 07:49:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'projectsdm.settings' doesn't exist in engine
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+15 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+16 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+17 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+18 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+19 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+20 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+22 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+23 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 07:49:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'projectsdm.settings' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 6 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 7 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+11 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+12 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+13 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+14 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+15 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+16 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+17 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+18 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+19 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+20 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+21 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+22 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+23 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+24 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+25 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 07:49:18 --> [Caused by] mysqli_sql_exception: Table 'projectsdm.settings' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 7 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 8 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+11 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+12 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+13 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+14 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+15 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+16 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+17 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+18 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+19 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+20 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+21 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+22 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+23 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+24 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+25 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+26 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-18 07:53:00 --> mysqli_sql_exception: Table 'projectsdm.settings' doesn't exist in engine in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#17 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#19 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#21 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#23 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#24 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#25 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#26 {main}
+CRITICAL - 2025-03-18 07:53:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'projectsdm.settings' doesn't exist in engine
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 4 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 5 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 6 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+10 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+11 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+12 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+13 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+14 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+15 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+16 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+17 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+18 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+19 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+20 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+22 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+23 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 07:53:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'projectsdm.settings' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 6 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 7 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+11 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+12 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+13 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+14 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+15 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+16 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+17 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+18 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+19 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+20 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+21 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+22 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+23 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+24 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+25 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 07:53:00 --> [Caused by] mysqli_sql_exception: Table 'projectsdm.settings' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 7 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 8 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+11 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+12 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+13 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+14 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+15 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+16 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+17 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+18 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+19 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+20 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+21 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+22 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+23 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+24 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+25 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+26 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-18 07:55:29 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'projectsdm' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#17 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#19 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#21 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#23 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#24 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#25 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#26 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'projectsdm' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#13 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#16 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#17 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#19 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#21 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#23 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#24 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#25 {main}
+CRITICAL - 2025-03-18 07:55:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'projectsdm'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+13 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+14 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+15 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+16 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+17 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+18 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+19 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+20 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+21 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+23 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+24 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-18 07:55:33 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'projectsdm' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#17 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#19 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#21 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#23 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#24 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#25 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#26 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'projectsdm' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#13 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#16 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#17 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#19 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#21 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#23 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#24 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#25 {main}
+CRITICAL - 2025-03-18 07:55:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'projectsdm'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+13 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+14 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+15 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+16 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+17 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+18 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+19 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+20 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+21 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+23 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+24 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-18 07:55:36 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'projectsdm' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Controllers\LoginController.php(33): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\LoginController->loginView()
+#15 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#16 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#17 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#18 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#19 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#20 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#21 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'projectsdm' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Controllers\LoginController.php(33): CodeIgniter\Shield\Auth->__call()
+#13 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\LoginController->loginView()
+#14 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#15 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#16 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#17 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#18 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#19 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#20 {main}
+CRITICAL - 2025-03-18 07:55:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'projectsdm'
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 VENDORPATH\codeigniter4\shield\src\Controllers\LoginController.php(33): CodeIgniter\Shield\Auth->__call()
+13 SYSTEMPATH\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\LoginController->loginView()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+18 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+19 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-18 07:55:37 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'projectsdm' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Controllers\LoginController.php(33): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\LoginController->loginView()
+#15 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#16 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#17 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#18 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#19 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#20 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#21 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'projectsdm' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Controllers\LoginController.php(33): CodeIgniter\Shield\Auth->__call()
+#13 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\LoginController->loginView()
+#14 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#15 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#16 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#17 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#18 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#19 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#20 {main}
+CRITICAL - 2025-03-18 07:55:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'projectsdm'
+[Method: GET, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 VENDORPATH\codeigniter4\shield\src\Controllers\LoginController.php(33): CodeIgniter\Shield\Auth->__call()
+13 SYSTEMPATH\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\LoginController->loginView()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+18 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+19 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-18 07:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 07:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 07:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 07:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 07:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 07:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 07:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 07:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 07:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 07:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-18 07:57:56 --> ErrorException: Undefined variable $products
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 28.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(21): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 08:03:40 --> ErrorException: Undefined variable $products
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 28.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(21): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 08:04:26 --> ErrorException: Undefined variable $products
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 28.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(21): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-18 08:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-18 08:04:31 --> ErrorException: Undefined variable $products
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 28.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(21): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 08:06:15 --> ErrorException: Undefined variable $products
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 28.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(21): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-18 08:06:32 --> ErrorException: Undefined variable $products
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 28.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(21): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-18 08:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:16:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 08:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-18 09:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

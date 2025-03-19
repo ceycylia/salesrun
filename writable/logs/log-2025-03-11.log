@@ -1,0 +1,1160 @@
+ERROR - 2025-03-11 01:35:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#17 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#19 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#21 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#23 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#24 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#25 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#26 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#13 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#16 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#17 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#19 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#21 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#23 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#24 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#25 {main}
+CRITICAL - 2025-03-11 01:35:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+13 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+14 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+15 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+16 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+17 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+18 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+19 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+20 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+21 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+23 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+24 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-11 01:35:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#17 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#19 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#21 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#23 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#24 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#25 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#26 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#13 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#16 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#17 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#19 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#21 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#23 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#24 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#25 {main}
+CRITICAL - 2025-03-11 01:35:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+13 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+14 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+15 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+16 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+17 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+18 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+19 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+20 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+21 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+23 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+24 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-11 01:35:37 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#16 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#17 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#19 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#21 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#23 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#24 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#25 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#26 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+#5 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+#6 D:\xampp\htdocs\salesrun\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+#7 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+#8 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+#10 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\xampp\htdocs\salesrun\vendor\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+#13 D:\xampp\htdocs\salesrun\system\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+#14 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#15 D:\xampp\htdocs\salesrun\system\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+#16 D:\xampp\htdocs\salesrun\system\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+#17 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+#18 D:\xampp\htdocs\salesrun\system\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+#19 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+#20 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+#21 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#22 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#23 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#24 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#25 {main}
+CRITICAL - 2025-03-11 01:35:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(186): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(51): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate()
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has()
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(25): CodeIgniter\Settings\Settings->get()
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(685): setting()
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserKey()
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(76): CodeIgniter\Shield\Auth->__call()
+13 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(228): CodeIgniter\Shield\Collectors\Auth->display()
+14 SYSTEMPATH\Debug\Toolbar.php(95): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+15 SYSTEMPATH\Debug\Toolbar.php(390): CodeIgniter\Debug\Toolbar->run()
+16 SYSTEMPATH\Filters\DebugToolbar.php(44): CodeIgniter\Debug\Toolbar->prepare()
+17 SYSTEMPATH\Filters\Filters.php(278): CodeIgniter\Filters\DebugToolbar->after()
+18 SYSTEMPATH\Filters\Filters.php(364): CodeIgniter\Filters\Filters->runAfter()
+19 SYSTEMPATH\CodeIgniter.php(407): CodeIgniter\Filters\Filters->runRequired()
+20 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+21 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+23 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+24 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-11 01:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-11 01:37:06 --> Error: Class "App\Libraries\DataTable" not found
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Services\DataTableService.php on line 33.
+ 1 APPPATH\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+ 2 APPPATH\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-11 01:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-11 01:40:17 --> Error: Class "App\Libraries\DataTable" not found
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Services\DataTableService.php on line 33.
+ 1 APPPATH\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+ 2 APPPATH\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-11 01:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 01:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-11 01:51:48 --> Error: Class "App\Libraries\DataTable" not found
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Services\DataTableService.php on line 33.
+ 1 APPPATH\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+ 2 APPPATH\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-11 01:52:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Models\VisitPipelineModel.php(65): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(31): App\Models\VisitPipelineModel->getAllDataWithPipeline()
+#8 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+#9 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#12 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#16 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#17 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#5 D:\xampp\htdocs\salesrun\app\Models\VisitPipelineModel.php(65): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(31): App\Models\VisitPipelineModel->getAllDataWithPipeline()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+#8 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-03-11 01:52:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: pipeline/visit]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\VisitPipelineModel.php(65): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Services\DataTableService.php(31): App\Models\VisitPipelineModel->getAllDataWithPipeline()
+ 7 APPPATH\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+ 8 APPPATH\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-11 01:52:47 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Models\VisitPipelineModel.php(65): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(31): App\Models\VisitPipelineModel->getAllDataWithPipeline()
+#8 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+#9 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#12 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#16 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#17 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#5 D:\xampp\htdocs\salesrun\app\Models\VisitPipelineModel.php(65): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(31): App\Models\VisitPipelineModel->getAllDataWithPipeline()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+#8 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-03-11 01:52:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: pipeline/visit]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\VisitPipelineModel.php(65): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Services\DataTableService.php(31): App\Models\VisitPipelineModel->getAllDataWithPipeline()
+ 7 APPPATH\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+ 8 APPPATH\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-11 01:58:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(201): mysqli->real_connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Models\VisitPipelineModel.php(65): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(31): App\Models\VisitPipelineModel->getAllDataWithPipeline()
+#8 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+#9 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#12 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#16 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#17 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#5 D:\xampp\htdocs\salesrun\app\Models\VisitPipelineModel.php(65): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(31): App\Models\VisitPipelineModel->getAllDataWithPipeline()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+#8 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-03-11 01:58:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: pipeline/visit]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\VisitPipelineModel.php(65): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Services\DataTableService.php(31): App\Models\VisitPipelineModel->getAllDataWithPipeline()
+ 7 APPPATH\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+ 8 APPPATH\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 01:58:49 --> Error: Call to undefined method App\Libraries\DataTable::renderColumn()
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Services\DataTableService.php on line 44.
+ 1 APPPATH\Services\DataTableService.php(19): App\Services\DataTableService->getVisitPipelineTable()
+ 2 APPPATH\Controllers\VisitPipeline.php(44): App\Services\DataTableService->getDataTable()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-11 02:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:48:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-11 02:55:25 --> ErrorException: The use statement with non-compound name 'IntlDateFormatter' has no effect
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Helpers\app_helper.php on line 3.
+ 1 SYSTEMPATH\Common.php(643): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Common.php(643): include_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(489): helper()
+ 4 SYSTEMPATH\Boot.php(258): CodeIgniter\Autoloader\Autoloader->loadHelpers()
+ 5 SYSTEMPATH\Boot.php(64): CodeIgniter\Boot::autoloadHelpers()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-11 02:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 02:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:24:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 03:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-11 04:46:05 --> ErrorException: Undefined variable $pipelines
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 9.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(18): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(32): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 04:48:48 --> ErrorException: Undefined variable $visit_pipelines
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 9.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(18): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(32): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 04:50:50 --> ErrorException: Undefined variable $pipelines
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 9.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(18): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(32): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 04:54:48 --> ErrorException: Undefined variable $pipelines
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 9.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(18): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 04:54:51 --> ErrorException: Undefined variable $pipelines
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 9.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(18): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 04:57:45 --> ErrorException: Undefined variable $pipelines
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 9.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(18): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 04:57:46 --> ErrorException: Undefined variable $pipelines
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 9.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(18): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 04:58:33 --> ErrorException: Undefined variable $pipelines
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 9.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(18): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 04:58:35 --> ErrorException: Undefined variable $pipelines
+[Method: GET, Route: pipeline/visit]
+in APPPATH\Views\pages\visit_pipeline\create.php on line 9.
+ 1 APPPATH\Views\pages\visit_pipeline\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Views\pages\visit_pipeline\index.php(18): view()
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\visit_pipeline\\index.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 9 APPPATH\Controllers\VisitPipeline.php(33): view()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-11 05:00:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 05:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 05:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 06:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 06:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 06:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 07:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 07:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 07:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 08:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 08:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 08:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 08:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 08:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 08:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 08:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 08:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 08:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-11 09:16:33 --> mysqli_sql_exception: Unknown column 'pipeline_name' in 'field list' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+#8 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2025-03-11 09:16:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pipeline_name' in 'field list'
+[Method: GET, Route: pipeline/getPipelines]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 09:16:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pipeline_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 09:16:33 --> [Caused by] mysqli_sql_exception: Unknown column 'pipeline_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-11 09:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-11 09:17:23 --> mysqli_sql_exception: Unknown column 'pipeline_name' in 'field list' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+#8 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2025-03-11 09:17:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pipeline_name' in 'field list'
+[Method: GET, Route: pipeline/getPipelines]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 09:17:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pipeline_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 09:17:23 --> [Caused by] mysqli_sql_exception: Unknown column 'pipeline_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-11 09:17:25 --> mysqli_sql_exception: Unknown column 'pipeline_name' in 'field list' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+#8 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2025-03-11 09:17:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pipeline_name' in 'field list'
+[Method: GET, Route: pipeline/getPipelines]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 09:17:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pipeline_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 09:17:25 --> [Caused by] mysqli_sql_exception: Unknown column 'pipeline_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-11 09:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-11 09:18:01 --> mysqli_sql_exception: Unknown column 'pipeline_name' in 'field list' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+#8 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2025-03-11 09:18:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pipeline_name' in 'field list'
+[Method: GET, Route: pipeline/getPipelines]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 09:18:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pipeline_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-11 09:18:01 --> [Caused by] mysqli_sql_exception: Unknown column 'pipeline_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Controllers\VisitPipeline.php(52): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VisitPipeline->getPipelines()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-11 09:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 09:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-11 11:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
