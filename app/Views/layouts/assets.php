@@ -18,7 +18,7 @@
     <script src="<?= base_url('sweetalert2/sweetalert2.js'); ?>"></script>
     <script src="<?php echo base_url('DataTables/datatables.min.js'); ?>" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
+    
     <!-- CDN Script -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script> -->

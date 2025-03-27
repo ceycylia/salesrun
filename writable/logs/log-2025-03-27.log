@@ -1,0 +1,1107 @@
+DEBUG - 2025-03-27 01:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 01:32:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`branch_code`, `actual`.`product_id`, `actual`.`acc_number`, `actual`.`actua...' at line 1 in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+#8 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+#9 D:\xampp\htdocs\salesrun\app\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\Actual->index()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#12 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#16 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2025-03-27 01:32:49 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`branch_code`, `actual`.`product_id`, `actual`.`acc_number`, `actual`.`actua...' at line 1
+[Method: GET, Route: performance/actual]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 6 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 7 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:32:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`branch_code`, `actual`.`product_id`, `actual`.`acc_number`, `actual`.`actua...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 8 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 9 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:32:49 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`branch_code`, `actual`.`product_id`, `actual`.`acc_number`, `actual`.`actua...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 9 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+10 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 01:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 01:35:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`branch_code`, `actual`.`product_id`, `actual`.`acc_number`, `actual`.`actua...' at line 1 in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+#8 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+#9 D:\xampp\htdocs\salesrun\app\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\Actual->index()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#12 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#16 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2025-03-27 01:35:38 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`branch_code`, `actual`.`product_id`, `actual`.`acc_number`, `actual`.`actua...' at line 1
+[Method: GET, Route: performance/actual]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 6 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 7 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:35:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`branch_code`, `actual`.`product_id`, `actual`.`acc_number`, `actual`.`actua...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 8 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 9 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:35:38 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`branch_code`, `actual`.`product_id`, `actual`.`acc_number`, `actual`.`actua...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 9 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+10 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-27 01:36:05 --> mysqli_sql_exception: Unknown column 'visit_pipelines.name' in 'field list' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+#8 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+#9 D:\xampp\htdocs\salesrun\app\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\Actual->index()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#12 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#16 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2025-03-27 01:36:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'visit_pipelines.name' in 'field list'
+[Method: GET, Route: performance/actual]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 6 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 7 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:36:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'visit_pipelines.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 8 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 9 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:36:05 --> [Caused by] mysqli_sql_exception: Unknown column 'visit_pipelines.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 9 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+10 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:37:02 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in D:\xampp\htdocs\salesrun\system\Model.php on line 928
+[Method: GET, Route: performance/actual]
+in SYSTEMPATH\Database\BaseBuilder.php on line 403.
+ 1 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->select()
+ 2 APPPATH\Models\ActualModel.php(36): CodeIgniter\Model->__call()
+ 3 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 4 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 5 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:37:09 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in D:\xampp\htdocs\salesrun\system\Model.php on line 928
+[Method: GET, Route: performance/actual]
+in SYSTEMPATH\Database\BaseBuilder.php on line 403.
+ 1 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->select()
+ 2 APPPATH\Models\ActualModel.php(36): CodeIgniter\Model->__call()
+ 3 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 4 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 5 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+ERROR - 2025-03-27 01:38:14 --> mysqli_sql_exception: Unknown column 'visit_pipelines.name' in 'field list' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+#8 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+#9 D:\xampp\htdocs\salesrun\app\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\Actual->index()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#12 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#16 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2025-03-27 01:38:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'visit_pipelines.name' in 'field list'
+[Method: GET, Route: performance/actual]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 6 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 7 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:38:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'visit_pipelines.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 8 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 9 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:38:14 --> [Caused by] mysqli_sql_exception: Unknown column 'visit_pipelines.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Models\ActualModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 9 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+10 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 01:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 01:48:41 --> mysqli_sql_exception: Unknown column 'visit_pipelines.name' in 'field list' in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 D:\xampp\htdocs\salesrun\app\Models\ActualModel.php(50): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+#8 D:\xampp\htdocs\salesrun\app\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+#9 D:\xampp\htdocs\salesrun\app\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\Actual->index()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#12 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#15 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#16 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#17 {main}
+CRITICAL - 2025-03-27 01:48:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'visit_pipelines.name' in 'field list'
+[Method: GET, Route: performance/actual]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Models\ActualModel.php(50): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 6 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 7 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:48:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'visit_pipelines.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Models\ActualModel.php(50): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 8 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+ 9 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 01:48:41 --> [Caused by] mysqli_sql_exception: Unknown column 'visit_pipelines.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Models\ActualModel.php(50): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\DataTableService.php(207): App\Models\ActualModel->getAllDataWithPipeline()
+ 9 APPPATH\Services\DataTableService.php(26): App\Services\DataTableService->getActualTable()
+10 APPPATH\Controllers\Actual.php(31): App\Services\DataTableService->getDataTable()
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Actual->index()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 01:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 01:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-27 01:53:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages/target/create.php"
+[Method: GET, Route: performance/target/create]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Target.php(39): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Target->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 02:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 02:34:12 --> mysqli_sql_exception: Column 'exiting_pipelines' cannot be null in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#6 D:\xampp\htdocs\salesrun\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#7 D:\xampp\htdocs\salesrun\system\BaseModel.php(750): CodeIgniter\Model->insert()
+#8 D:\xampp\htdocs\salesrun\app\Controllers\Pipeline.php(80): CodeIgniter\BaseModel->save()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\Pipeline->store()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-03-27 02:34:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'exiting_pipelines' cannot be null
+[Method: POST, Route: pipeline/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert()
+ 6 APPPATH\Controllers\Pipeline.php(80): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pipeline->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:34:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'exiting_pipelines' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert()
+ 8 APPPATH\Controllers\Pipeline.php(80): CodeIgniter\BaseModel->save()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pipeline->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:34:12 --> [Caused by] mysqli_sql_exception: Column 'exiting_pipelines' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert()
+ 9 APPPATH\Controllers\Pipeline.php(80): CodeIgniter\BaseModel->save()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pipeline->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 02:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 02:34:25 --> mysqli_sql_exception: Column 'exiting_pipelines' cannot be null in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#6 D:\xampp\htdocs\salesrun\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#7 D:\xampp\htdocs\salesrun\system\BaseModel.php(750): CodeIgniter\Model->insert()
+#8 D:\xampp\htdocs\salesrun\app\Controllers\Pipeline.php(80): CodeIgniter\BaseModel->save()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\Pipeline->store()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-03-27 02:34:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'exiting_pipelines' cannot be null
+[Method: POST, Route: pipeline/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert()
+ 6 APPPATH\Controllers\Pipeline.php(80): CodeIgniter\BaseModel->save()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pipeline->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:34:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'exiting_pipelines' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert()
+ 8 APPPATH\Controllers\Pipeline.php(80): CodeIgniter\BaseModel->save()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pipeline->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:34:25 --> [Caused by] mysqli_sql_exception: Column 'exiting_pipelines' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert()
+ 9 APPPATH\Controllers\Pipeline.php(80): CodeIgniter\BaseModel->save()
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pipeline->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 02:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-27 02:51:21 --> ErrorException: Undefined array key "id_product"
+[Method: GET, Route: pipeline/closing]
+in APPPATH\Views\pages\closing_pipeline\create.php on line 39.
+ 1 APPPATH\Views\pages\closing_pipeline\create.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\salesrun\\app\\Views\\pages\\closing_pipeline\\create.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ClosingPipeline.php(44): view()
+ 6 APPPATH\Controllers\ClosingPipeline.php(29): App\Controllers\ClosingPipeline->createForm()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 02:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 02:52:26 --> mysqli_sql_exception: Column 'visitpipeline_id' cannot be null in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#6 D:\xampp\htdocs\salesrun\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#7 D:\xampp\htdocs\salesrun\app\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+#8 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-03-27 02:52:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'visitpipeline_id' cannot be null
+[Method: POST, Route: pipeline/closing]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 5 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:52:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'visitpipeline_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 7 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:52:26 --> [Caused by] mysqli_sql_exception: Column 'visitpipeline_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 8 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 02:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 02:52:53 --> mysqli_sql_exception: Column 'visitpipeline_id' cannot be null in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#6 D:\xampp\htdocs\salesrun\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#7 D:\xampp\htdocs\salesrun\app\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+#8 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-03-27 02:52:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'visitpipeline_id' cannot be null
+[Method: POST, Route: pipeline/closing]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 5 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:52:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'visitpipeline_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 7 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:52:53 --> [Caused by] mysqli_sql_exception: Column 'visitpipeline_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 8 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 02:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 02:55:23 --> mysqli_sql_exception: Column 'visitpipeline_id' cannot be null in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#6 D:\xampp\htdocs\salesrun\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#7 D:\xampp\htdocs\salesrun\app\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+#8 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-03-27 02:55:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'visitpipeline_id' cannot be null
+[Method: POST, Route: pipeline/closing]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 5 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:55:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'visitpipeline_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 7 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 02:55:23 --> [Caused by] mysqli_sql_exception: Column 'visitpipeline_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 8 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 02:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 02:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 03:10:54 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`projectsdm`.`actual`, CONSTRAINT `fk_actual_visit` FOREIGN KEY (`visitpipeline_id`) REFERENCES `visit_pipelines` (`id`)) in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#6 D:\xampp\htdocs\salesrun\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#7 D:\xampp\htdocs\salesrun\app\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+#8 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-03-27 03:10:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`projectsdm`.`actual`, CONSTRAINT `fk_actual_visit` FOREIGN KEY (`visitpipeline_id`) REFERENCES `visit_pipelines` (`id`))
+[Method: POST, Route: pipeline/closing]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 5 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 03:10:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`projectsdm`.`actual`, CONSTRAINT `fk_actual_visit` FOREIGN KEY (`visitpipeline_id`) REFERENCES `visit_pipelines` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 7 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 03:10:54 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`projectsdm`.`actual`, CONSTRAINT `fk_actual_visit` FOREIGN KEY (`visitpipeline_id`) REFERENCES `visit_pipelines` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 8 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+DEBUG - 2025-03-27 03:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-27 03:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-27 03:13:53 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`projectsdm`.`actual`, CONSTRAINT `fk_actual_visit` FOREIGN KEY (`visitpipeline_id`) REFERENCES `visit_pipelines` (`id`)) in D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\xampp\htdocs\salesrun\system\Database\MySQLi\Connection.php(327): mysqli->query()
+#1 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\salesrun\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\salesrun\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\salesrun\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\salesrun\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#6 D:\xampp\htdocs\salesrun\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#7 D:\xampp\htdocs\salesrun\app\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+#8 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+#9 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 D:\xampp\htdocs\salesrun\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\xampp\htdocs\salesrun\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\salesrun\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 D:\xampp\htdocs\salesrun\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 D:\xampp\htdocs\salesrun\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-03-27 03:13:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`projectsdm`.`actual`, CONSTRAINT `fk_actual_visit` FOREIGN KEY (`visitpipeline_id`) REFERENCES `visit_pipelines` (`id`))
+[Method: POST, Route: pipeline/closing]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 5 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 03:13:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`projectsdm`.`actual`, CONSTRAINT `fk_actual_visit` FOREIGN KEY (`visitpipeline_id`) REFERENCES `visit_pipelines` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 7 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')
+CRITICAL - 2025-03-27 03:13:53 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`projectsdm`.`actual`, CONSTRAINT `fk_actual_visit` FOREIGN KEY (`visitpipeline_id`) REFERENCES `visit_pipelines` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert()
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert()
+ 8 APPPATH\Controllers\ClosingPipeline.php(76): CodeIgniter\Model->insert()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClosingPipeline->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\xampp\\htdocs\\salesrun\\public\\index.php')

@@ -8,7 +8,7 @@ $village = isset($addressParts[2]) ? trim($addressParts[2]) : '';
 $city = isset($addressParts[3]) ? trim($addressParts[3]) : '';
 ?>
 
-<form id="pipeline-form" method="POST" action="<?= base_url($action) ?>">
+<form id="pipeline-form" method="POST" action="<?= base_url($action) ?>" data-table-id='pipelineTable'>
     <input type="hidden" name="id" value="<?= isset($data['id']) ? $data['id'] : '' ?>">
 
     <div>
@@ -53,30 +53,30 @@ $city = isset($addressParts[3]) ? trim($addressParts[3]) : '';
     </div>
 
     <div>
-    <label class="block text-sm font-medium">Pekerjaan</label>
-    <select name="job" class="w-full border p-2 rounded">
-        <option value="">Pilih Pekerjaan</option>
-        <option value="ASN" <?= isset($data['job']) && $data['job'] == 'ASN' ? 'selected' : '' ?>>ASN</option>
-        <option value="BUMN" <?= isset($data['job']) && $data['job'] == 'BUMN' ? 'selected' : '' ?>>BUMN</option>
-        <option value="BUMD" <?= isset($data['job']) && $data['job'] == 'BUMD' ? 'selected' : '' ?>>BUMD</option>
-        <option value="Engineer" <?= isset($data['job']) && $data['job'] == 'Engineer' ? 'selected' : '' ?>>Engineer</option>
-        <option value="Freelancer" <?= isset($data['job']) && $data['job'] == 'Freelancer' ? 'selected' : '' ?>>Freelancer</option>
-        <option value="Wiraswasta" <?= isset($data['job']) && $data['job'] == 'Wiraswasta' ? 'selected' : '' ?>>Wiraswasta</option>
-        <option value="Petani" <?= isset($data['job']) && $data['job'] == 'Petani' ? 'selected' : '' ?>>Petani</option>
-        <option value="Nelayan" <?= isset($data['job']) && $data['job'] == 'Nelayan' ? 'selected' : '' ?>>Nelayan</option>
-        <option value="Pedagang" <?= isset($data['job']) && $data['job'] == 'Pedagang' ? 'selected' : '' ?>>Pedagang</option>
-        <option value="Ojek" <?= isset($data['job']) && $data['job'] == 'Ojek' ? 'selected' : '' ?>>Ojek</option>
-        <option value="Supir" <?= isset($data['job']) && $data['job'] == 'Supir' ? 'selected' : '' ?>>Supir</option>
-        <option value="Buruh" <?= isset($data['job']) && $data['job'] == 'Buruh' ? 'selected' : '' ?>>Buruh</option>
-        <option value="Tenaga Kesehatan" <?= isset($data['job']) && $data['job'] == 'Tenaga Kesehatan' ? 'selected' : '' ?>>Tenaga Kesehatan</option>
-        <option value="Pekerja Industri Kreatif" <?= isset($data['job']) && $data['job'] == 'Pekerja Industri Kreatif' ? 'selected' : '' ?>>Pekerja Industri Kreatif</option>
-        <option value="Guru/Dosen" <?= isset($data['job']) && $data['job'] == 'Guru/Dosen' ? 'selected' : '' ?>>Guru/Dosen</option>
-        <option value="Mahasiswa" <?= isset($data['job']) && $data['job'] == 'Mahasiswa' ? 'selected' : '' ?>>Mahasiswa</option>
-        <option value="Pensiunan" <?= isset($data['job']) && $data['job'] == 'Pensiunan' ? 'selected' : '' ?>>Pensiunan</option>
-        <option value="Ibu Rumah Tangga" <?= isset($data['job']) && $data['job'] == 'Ibu Rumah Tangga' ? 'selected' : '' ?>>Ibu Rumah Tangga</option>
-        <option value="Other" <?= isset($data['job']) && $data['job'] == 'Other' ? 'selected' : '' ?>>Other</option>
-    </select>
-</div>
+        <label class="block text-sm font-medium">Pekerjaan</label>
+        <select name="job" class="w-full border p-2 rounded">
+            <option value="">Pilih Pekerjaan</option>
+            <option value="ASN" <?= isset($data['job']) && $data['job'] == 'ASN' ? 'selected' : '' ?>>ASN</option>
+            <option value="BUMN" <?= isset($data['job']) && $data['job'] == 'BUMN' ? 'selected' : '' ?>>BUMN</option>
+            <option value="BUMD" <?= isset($data['job']) && $data['job'] == 'BUMD' ? 'selected' : '' ?>>BUMD</option>
+            <option value="Engineer" <?= isset($data['job']) && $data['job'] == 'Engineer' ? 'selected' : '' ?>>Engineer</option>
+            <option value="Freelancer" <?= isset($data['job']) && $data['job'] == 'Freelancer' ? 'selected' : '' ?>>Freelancer</option>
+            <option value="Wiraswasta" <?= isset($data['job']) && $data['job'] == 'Wiraswasta' ? 'selected' : '' ?>>Wiraswasta</option>
+            <option value="Petani" <?= isset($data['job']) && $data['job'] == 'Petani' ? 'selected' : '' ?>>Petani</option>
+            <option value="Nelayan" <?= isset($data['job']) && $data['job'] == 'Nelayan' ? 'selected' : '' ?>>Nelayan</option>
+            <option value="Pedagang" <?= isset($data['job']) && $data['job'] == 'Pedagang' ? 'selected' : '' ?>>Pedagang</option>
+            <option value="Ojek" <?= isset($data['job']) && $data['job'] == 'Ojek' ? 'selected' : '' ?>>Ojek</option>
+            <option value="Supir" <?= isset($data['job']) && $data['job'] == 'Supir' ? 'selected' : '' ?>>Supir</option>
+            <option value="Buruh" <?= isset($data['job']) && $data['job'] == 'Buruh' ? 'selected' : '' ?>>Buruh</option>
+            <option value="Tenaga Kesehatan" <?= isset($data['job']) && $data['job'] == 'Tenaga Kesehatan' ? 'selected' : '' ?>>Tenaga Kesehatan</option>
+            <option value="Pekerja Industri Kreatif" <?= isset($data['job']) && $data['job'] == 'Pekerja Industri Kreatif' ? 'selected' : '' ?>>Pekerja Industri Kreatif</option>
+            <option value="Guru/Dosen" <?= isset($data['job']) && $data['job'] == 'Guru/Dosen' ? 'selected' : '' ?>>Guru/Dosen</option>
+            <option value="Mahasiswa" <?= isset($data['job']) && $data['job'] == 'Mahasiswa' ? 'selected' : '' ?>>Mahasiswa</option>
+            <option value="Pensiunan" <?= isset($data['job']) && $data['job'] == 'Pensiunan' ? 'selected' : '' ?>>Pensiunan</option>
+            <option value="Ibu Rumah Tangga" <?= isset($data['job']) && $data['job'] == 'Ibu Rumah Tangga' ? 'selected' : '' ?>>Ibu Rumah Tangga</option>
+            <option value="Other" <?= isset($data['job']) && $data['job'] == 'Other' ? 'selected' : '' ?>>Other</option>
+        </select>
+    </div>
 
 
     <div>

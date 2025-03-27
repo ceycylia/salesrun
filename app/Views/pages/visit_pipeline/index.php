@@ -27,10 +27,12 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
+
+<script src="<?= base_url('assets/js/submitData.js') ?>"></script>
+
 <script>
     // INI FUNCTION EDIT NYA, namanya jangan diganti karna dari library
     function editItem(row) {
-        console.log(row);
 
         return openModal('edit', 'visit/edit/' + row.id) // daftarin di routes nya
     }
@@ -42,102 +44,49 @@
         }
     }
 
-    // Lainnya ... 
-    // ini sama aja tapi pakai Observer
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     const modalContent = document.getElementById("modal-content");
+    // Submit Form Modal
+    // const form = document.getElementById("modal-content");
+    // if (form) {
+    //     form.addEventListener("submit", function(event) {
+    //         event.preventDefault();
 
-    //     if (modalContent) {
-    //         const observer = new MutationObserver(() => {
-    //             // Setelah konten berubah, cari input dalam modal
-    //             const searchInput = document.getElementById("pipeline_search");
-    //             const resultsBox = document.getElementById("pipeline_results");
-    //             const pipelineIdInput = document.getElementById("pipeline_id");
-    //             const pipelinePotential = document.getElementById("pipeline_potential");
-    //             const pipelineAddress = document.getElementById("pipeline_address");
+    //         Swal.fire({
+    //             title: "Yakin Simpan?",
+    //             text: "Pastikan data sudah benar.",
+    //             icon: "question",
+    //             showCancelButton: true,
+    //             confirmButtonText: "Ya, Simpan!",
+    //             cancelButtonText: "Batal"
+    //         }).then((result) => {
+    //             if (result.isConfirmed) {
+    //                 let formData = new FormData(event.target);
 
-    //             console.log("First search:", searchInput);
-
-    //             // Fungsi untuk mencari pipeline
-    //             function searchPipeline(query) {
-    //                 fetch("<?= base_url('pipeline/getPipelines') ?>?search=" + encodeURIComponent(query))
+    //                 fetch(event.target.action, {
+    //                         method: event.target.method,
+    //                         body: formData
+    //                     })
     //                     .then(response => response.json())
     //                     .then(data => {
-    //                         resultsBox.innerHTML = "";
-    //                         resultsBox.classList.add("hidden");
-
-    //                         if (data.length > 0) {
-    //                             const filteredData = data.filter(item =>
-    //                                 item.name.toLowerCase().includes(query.toLowerCase())
-    //                             );
-
-    //                             if (filteredData.length > 0) {
-    //                                 resultsBox.classList.remove("hidden");
-    //                                 filteredData.forEach(pipeline => {
-    //                                     const div = document.createElement("div");
-    //                                     div.classList.add("p-2", "hover:bg-gray-200", "cursor-pointer");
-    //                                     div.textContent = pipeline.name;
-    //                                     div.dataset.id = pipeline.id;
-
-    //                                     div.addEventListener("click", function() {
-    //                                         searchInput.value = this.textContent;
-    //                                         pipelineIdInput.value = this.dataset.id;
-    //                                         resultsBox.innerHTML = "";
-    //                                         resultsBox.classList.add("hidden");
-
-    //                                         // Fetch detail pipeline (potential & address)
-    //                                         fetch("<?= base_url('pipeline/getPipelineDetails/') ?>" + this.dataset.id)
-    //                                             .then(response => response.json())
-    //                                             .then(detail => {
-    //                                                 if (detail.error) {
-    //                                                     pipelinePotential.value = "Data tidak tersedia";
-    //                                                     pipelineAddress.value = "Data tidak tersedia";
-    //                                                 } else {
-    //                                                     pipelinePotential.value = detail.potential;
-    //                                                     pipelineAddress.value = detail.address;
-    //                                                 }
-    //                                             })
-    //                                             .catch(error => console.error("Fetch Error:", error));
-    //                                     });
-
-    //                                     resultsBox.appendChild(div);
-    //                                 });
-    //                             } else {
-    //                                 resultsBox.innerHTML = "<div class='p-2 text-gray-500'>Nama tidak ditemukan</div>";
+    //                         closeModal();
+    //                         Swal.fire({
+    //                             title: data.status === 'success' ? "Berhasil!" : "Gagal!",
+    //                             text: data.message,
+    //                             icon: data.status === 'success' ? "success" : "error"
+    //                         }).then(() => {
+    //                             if (data.status === 'success') {
+    //                                 $('#visitPipelineTable').DataTable().ajax.reload(null, false); // Reload DataTable
     //                             }
-    //                         } else {
-    //                             resultsBox.innerHTML = "<div class='p-2 text-gray-500'>Nama tidak ditemukan</div>";
-    //                         }
+    //                         });
     //                     })
-    //                     .catch(error => console.error("Error fetching pipeline data:", error));
+    //                     .catch(error => {
+    //                         Swal.fire("Error!", "Terjadi kesalahan, coba lagi.", "error");
+    //                         console.error("Error:", error);
+    //                     });
     //             }
-
-    //             // Event listener untuk pencarian
-    //             searchInput.addEventListener("input", function() {
-    //                 const query = searchInput.value.trim();
-    //                 if (query.length < 2) {
-    //                     resultsBox.innerHTML = "";
-    //                     resultsBox.classList.add("hidden");
-    //                     return;
-    //                 }
-    //                 searchPipeline(query);
-    //             });
-
-    //             // Tutup dropdown jika klik di luar
-    //             document.addEventListener("click", function(event) {
-    //                 if (!searchInput.contains(event.target) && !resultsBox.contains(event.target)) {
-    //                     resultsBox.classList.add("hidden");
-    //                 }
-    //             });
     //         });
+    //     });
+    // }
 
-    //         // Observasi perubahan dalam modal-content
-    //         observer.observe(modalContent, {
-    //             childList: true,
-    //             subtree: true
-    //         });
-    //     }
-    // });
 
 
     $(document).on("input", "#pipeline_search", function() {
@@ -183,28 +132,16 @@
 
     // Delegasikan event click ke hasil pencarian
     $(document).on("click", "#pipeline_results div", function() {
-        const searchInput = document.getElementById("pipeline_search");
-        const pipelineIdInput = document.getElementById("pipeline_id");
-        const pipelinePotential = document.getElementById("pipeline_potential");
-        const pipelineAddress = document.getElementById("pipeline_address");
-        const resultsBox = document.getElementById("pipeline_results");
+        $("#pipeline_search").val($(this).text());
+        $("#pipeline_id").val($(this).data("id"));
+        $("#pipeline_results").html("").addClass("hidden");
 
-        searchInput.value = this.textContent;
-        pipelineIdInput.value = this.dataset.id;
-        resultsBox.innerHTML = "";
-        resultsBox.classList.add("hidden");
-
-        // Fetch detail pipeline (potential & address)
-        fetch("<?= base_url('pipeline/getPipelineDetails/') ?>" + this.dataset.id)
+        // Fetch detail pipeline
+        fetch("<?= base_url('pipeline/getPipelineDetails/') ?>" + $(this).data("id"))
             .then(response => response.json())
             .then(detail => {
-                if (detail.error) {
-                    pipelinePotential.value = "Data tidak tersedia";
-                    pipelineAddress.value = "Data tidak tersedia";
-                } else {
-                    pipelinePotential.value = detail.potential;
-                    pipelineAddress.value = detail.address;
-                }
+                $("#pipeline_potential").val(detail.potential || "Data tidak tersedia");
+                $("#pipeline_address").val(detail.address || "Data tidak tersedia");
             })
             .catch(error => console.error("Fetch Error:", error));
     });

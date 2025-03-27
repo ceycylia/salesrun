@@ -14,7 +14,8 @@ class ProductModel extends Model
     protected $protectFields    = true;
 
     // ✅ Tambahkan kolom yang bisa diisi
-    protected $allowedFields    = ['name', 'description', 'timeline', 'created_by', 'status'];
+    protected $allowedFields = ['id_product', 'name', 'description', 'timeline', 'created_by', 'status'];
+
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -23,7 +24,7 @@ class ProductModel extends Model
     protected array $castHandlers = [];
 
     // ✅ Perbaiki penggunaan timestamps
-    protected $useTimestamps = true;  // Mengaktifkan otomatisasi waktu
+    protected $useTimestamps = false;  // Mengaktifkan otomatisasi waktu
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
@@ -37,7 +38,7 @@ class ProductModel extends Model
 
     // Callbacks
     protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
+    protected $beforeInsert   = ['setTimeline'];
     protected $afterInsert    = [];
     protected $beforeUpdate   = [];
     protected $afterUpdate    = [];
@@ -49,7 +50,7 @@ class ProductModel extends Model
     // ✅ Ambil semua produk (hanya yang aktif)
     public function getAllProducts()
     {
-        return $this->select('id, name, description, timeline, created_by, status')
+        return $this->select('id, id_product, name, description, status')
             ->where('status', 1)  // Hanya produk aktif
             ->orderBy('name', 'ASC')  // Urutkan berdasarkan nama
             ->findAll();
@@ -58,9 +59,18 @@ class ProductModel extends Model
     // ✅ Ambil produk untuk dropdown (ID & Nama saja)
     public function getProductDropdown()
     {
-        return $this->select('id, name')
+        return $this->select('id, id_product, name')
             ->where('status', 1)  // Hanya produk aktif
             ->orderBy('name', 'ASC')
             ->findAll();
+    }
+
+
+    protected function setTimeline(array $data)
+    {
+        if (!isset($data['data']['timeline'])) {
+            $data['data']['timeline'] = date('Y-m-d H:i:s');
+        }
+        return $data;
     }
 }

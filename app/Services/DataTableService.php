@@ -3,9 +3,11 @@
 namespace App\Services;
 
 use App\Libraries\DataTable;
+use App\Models\ActualModel;
 use App\Models\VisitPipelineModel;
 use App\Models\PipelineModel;
 use App\Models\ProductModel;
+use App\Models\TargetModel;
 
 class DataTableService
 {
@@ -20,6 +22,10 @@ class DataTableService
                 return $this->getClosingPipelineTable();
             case 'product': // Menambahkan case product
                 return $this->getProductTable();
+            case 'actual':
+                return $this->getActualTable();
+            case 'target':
+                return $this->getTargetTable();
             default:
                 return null;
         }
@@ -101,7 +107,7 @@ class DataTableService
                     : '<span class="badge bg-warning">Tidak</span>';
             })
             ->editColumn('date_visit', function ($row) {
-                return format_tanggal_carbon($row['date_visit']);
+                return format_tanggal($row['date_visit']);
             })
             ->addColumn('actions', function ($row) {
                 $rowJson = htmlspecialchars(json_encode($row), ENT_QUOTES, 'UTF-8');
@@ -138,7 +144,7 @@ class DataTableService
                     : '<span class="badge bg-warning">Open</span>';
             })
             ->editColumn('date_visit', function ($row) {
-                return format_tanggal_carbon($row['date_visit']);
+                return format_tanggal($row['date_visit']);
             })
             ->addColumn('actions', function ($row) {
                 $rowJson = htmlspecialchars(json_encode($row), ENT_QUOTES, 'UTF-8');
@@ -159,10 +165,13 @@ class DataTableService
         {
             return [
                 ['data' => 'id', 'title' => 'ID'],
+                ['data' => 'id_product', 'title' => 'ID Product'],
                 ['data' => 'name', 'title' => 'Nama Produk'],
                 ['data' => 'description', 'title' => 'Deskripsi'],
-                ['data' => 'timeline', 'title' => 'Timeline'],
+                //  ['data' => 'timeline', 'title' => 'Timeline'],
                 ['data' => 'status', 'title' => 'Status']
+
+
             ];
         }
 
@@ -172,9 +181,9 @@ class DataTableService
             $query,
             getProductColumns()
         ))
-            ->editColumn('timeline', function ($row) {
-                return format_tanggal_carbon($row['timeline']); // Format tanggal biar enak dibaca
-            })
+            // ->editColumn('timeline', function ($row) {
+            //     return format_tanggal($row['timeline']); // Format tanggal biar enak dibaca
+            // })
             ->editColumn('status', function ($row) {
                 return $row['status'] == 1
                     ? '<span class="badge bg-success">Active</span>'
@@ -189,5 +198,76 @@ class DataTableService
                     <button class='btn btn-danger btn-sm' onclick='deleteProduct({$rowJson})'>Delete</button>";
             })
             ->rawColumns(['actions', 'status']);
+    }
+
+    // actual
+    protected function getActualTable(): DataTable
+    {
+        $model = new ActualModel();
+        $query = $model->getAllDataWithPipeline(); // nanti method ini lo tambahin di modelnya
+
+        function getActualColumns()
+        {
+            return [
+                ['data' => 'id', 'title' => 'ID'],
+                ['data' => 'id_fso', 'title' => 'ID FSO'],
+                ['data' => 'visitpipeline_id', 'title' => 'Nama Pipeline'],
+                ['data' => 'branch_code', 'title' => 'Kode Bank'],
+                ['data' => 'product_id', 'title' => 'ID Produk'],
+                ['data' => 'acc_number', 'title' => 'Nomor Rekening'],
+                ['data' => 'actual', 'title' => 'Aktual'],
+                ['data' => 'month', 'title' => 'Bulan'],
+                ['data' => 'timestamp', 'title' => 'Created At']
+            ];
+        }
+
+        return (new DataTable(
+            'actualTable',
+            base_url('performance/actual/datatable'),
+            $query,
+            getActualColumns()
+        ))
+            ->editColumn('timestamp', function ($row) {
+                return '<span class="badge bg-info">' . format_tanggal($row['timestamp']) . '</span>';
+            })
+            ->addColumn('actions', function ($row) {
+                $rowJson = htmlspecialchars(json_encode($row), ENT_QUOTES, 'UTF-8');
+
+                return "<button class='btn btn-warning btn-sm' onclick='editActual({$rowJson})'>Edit</button>
+                    <button class='btn btn-danger btn-sm' onclick='deleteActual({$rowJson})'>Delete</button>";
+            })
+            ->rawColumns(['timestamp', 'actions']);
+    }
+
+    protected function getTargetTable(): DataTable
+    {
+        $model = new TargetModel();
+        $query = $model->findAll();
+
+        function getTargetColumns()
+        {
+            return [
+                ['data' => 'id', 'title' => 'ID'],
+                ['data' => 'id_fso', 'title' => 'FSO ID'],
+                ['data' => 'month', 'title' => 'Month'],
+                ['data' => 'target', 'title' => 'Target'],
+            ];
+        }
+
+        return (new DataTable(
+            'targetTable',
+            base_url('performance/target/datatable'),
+            $query,
+            getTargetColumns()
+        ))
+            ->editColumn('timestamp', function ($row) {
+                return '<span class="badge bg-info">' . format_tanggal($row['timestamp']) . '</span>';
+            })
+            ->addColumn('actions', function ($row) {
+                $rowJson = htmlspecialchars(json_encode($row), ENT_QUOTES, 'UTF-8');
+                return "<button class='btn btn-warning btn-sm' onclick='editTarget({$rowJson})'>Edit</button>
+                        <button class='btn btn-danger btn-sm' onclick='deleteTarget({$rowJson})'>Delete</button>";
+            })
+            ->rawColumns(['timestamp', 'actions']);
     }
 }

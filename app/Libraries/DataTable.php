@@ -72,9 +72,11 @@ class DataTable
         $request = service('request');
         $start = (int) $request->getGet('start', FILTER_SANITIZE_NUMBER_INT);
         $length = (int) $request->getGet('length', FILTER_SANITIZE_NUMBER_INT);
-        $searchValue = trim($request->getGet('search')['value'] ?? '');
+        $search = $request->getGet('search');
+        $searchValue = is_array($search) && isset($search['value']) ? trim($search['value']) : '';
 
         $query = $this->query;
+
         // Pastikan query bisa dieksekusi
 
         // Pastikan query bisa dieksekusi
@@ -112,7 +114,10 @@ class DataTable
             if ($searchValue) {
                 $query = array_filter($query, function ($row) use ($searchValue) {
                     foreach ($this->columns as $col) {
-                        if (stripos($row[$col], $searchValue) !== false) {
+                        // Perbaikan: Pastikan kita mendapatkan string nama kolom
+                        $columnName = is_array($col) ? ($col['data'] ?? '') : $col; // disini
+
+                        if ($columnName && isset($row[$columnName]) && stripos($row[$columnName], $searchValue) !== false) {
                             return true;
                         }
                     }

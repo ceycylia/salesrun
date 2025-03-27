@@ -24,9 +24,9 @@
 
 <?= $this->section('script') ?>
 <script>
-    function editItem(row) {
-        return openModal('edit', 'product/edit/' + row.id);
-    }
+   function editItem(row) {
+    return openModal('edit', 'admin/master/product/edit/' + row.id);
+}
 
     function deleteProduct(row) {
         Swal.fire({

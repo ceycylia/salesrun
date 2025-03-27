@@ -3,7 +3,8 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\PipelineModel;
+use App\Models\VisitPipelineModel;
+use App\Models\ActualModel;
 use App\Services\DataTableService;
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -13,45 +14,67 @@ class ClosingPipeline extends BaseController
     use ResponseTrait;
 
     protected DataTableService $dataTableService;
-    protected PipelineModel $pipelineModel;
+    protected VisitPipelineModel $visitPipelineModel;
+    protected ActualModel $actualModel;
 
     public function __construct()
     {
         $this->dataTableService = new DataTableService();
-        $this->pipelineModel = new PipelineModel();
+        $this->visitPipelineModel = new VisitPipelineModel();
+        $this->actualModel = new ActualModel();
     }
 
     public function index()
     {
-        $pages = ['title' => 'Closing Pipeline'];
-        $dataTable = $this->dataTableService->getDataTable('closingPipeline');
-        return view('pages/closing_pipeline/index', compact('pages', 'dataTable'));
+        return $this->createForm();
     }
 
     public function createForm()
     {
-        $pipelines = $this->pipelineModel->select('id, name')->findAll();  // Fetch ID & Nama Pipeline
+        // Ambil nama nasabah (pipeline) yang sudah closing (status_closing = 1)
+        $pipelines = $this->visitPipelineModel->getClosedPipelineCustomers();
+        $productModel = new \App\Models\ProductModel(); // Pastikan model dipanggil
+        $products = $productModel->getProductDropdown(); // Ambil produk aktif
+
+        // Debugging: Cek apakah $products ada datanya
+        if (empty($products)) {
+            return "Produk tidak ditemukan!";
+        }
+
         return view('pages/closing_pipeline/create', [
-            'action' => base_url('pipeline/visit'),
-            'pipelines' => $pipelines
+            'action' => base_url('pipeline/closing'),
+            'pipelines' => $pipelines,
+            'products' => $products // Kirim ke view
         ]);
     }
 
-    // Fetch data pipelines buat dropdown (AJAX)
-    public function getPipelines()
-    {
-        return $this->response->setJSON($this->pipelineModel->select('id, name')->findAll());
-    }
-
-    // Return data untuk DataTables
-    public function visitPipelineData()
-    {
-        return $this->response->setJSON($this->dataTableService->getDataTable('visitPipeline')->generateJson());
-    }
-
-    // Simpan data visit pipeline baru
     public function store()
     {
-        echo "ini untuk store";
+        $validation = \Config\Services::validation();
+        $rules = [
+            'pipeline_id'     => 'required|integer',
+            'bank_code'       => 'required|string',
+            'product_id'      => 'required|integer',
+            'account_number'  => 'required|string',
+            'actual'          => 'required|numeric'
+        ];
+
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        }
+
+        $data = [
+            'pipeline_id' => $this->request->getPost('pipeline_id'),
+            'branch_code' => $this->request->getPost('bank_code'),
+            'id_product' => $this->request->getPost('product_id'),
+            'acc_number' => $this->request->getPost('account_number'),
+            'actual' => $this->request->getPost('actual'),
+            'timestamp' => date('Y-m-d H:i:s'),
+            'month' => date('n'),
+        ];
+
+        $this->actualModel->insert($data);
+
+        return redirect()->to('/pipeline/closing')->with('success', 'Data closing berhasil disimpan.');
     }
 }

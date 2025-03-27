@@ -1,4 +1,4 @@
-<form id="productForm" action="<?= base_url($action) ?>" method="post">
+<form id="product-form" method="POST" action="<?= base_url('admin/master/product/store') ?>">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
             <label for="id_product" class="block text-sm font-medium">ID Produk</label>

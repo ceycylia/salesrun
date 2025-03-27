@@ -26,7 +26,7 @@ class Product extends BaseController
     public function index()
     {
         $dataTable = $this->dataTableService->getDataTable('product');
-        
+
         $pages = [
             'title' => 'Master Product',
             'dataTable' => $dataTable
@@ -77,32 +77,50 @@ class Product extends BaseController
 
     public function store()
     {
-        $data = $this->request->getPost(['name', 'description', 'timeline', 'status']);
-
-        if ($this->productModel->insert($data)) {
-            return redirect()->to('admin/master/product')->with('success', 'Produk berhasil disimpan');
+        $productModel = new ProductModel();
+    
+        $data = [
+            'id_product' => $this->request->getPost('id_product'),
+            'name' => $this->request->getPost('name'),
+            'description' => $this->request->getPost('description'),
+            'created_by' => session('user_id'),
+            'status' => $this->request->getPost('status'),
+        ];
+    
+        if ($productModel->insert($data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Produk berhasil ditambahkan']);
+        } else {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Gagal menambahkan produk']);
         }
-
-        return redirect()->back()->withInput()->with('error', 'Gagal menyimpan produk');
     }
+    
 
     public function update($id)
-    {
-        $data = $this->request->getRawInput();
+{
+    $productModel = new ProductModel();
 
-        if ($this->productModel->update($id, $data)) {
-            return redirect()->to('admin/master/product')->with('success', 'Produk berhasil diperbarui');
+    $data = [
+        'id_product' => $this->request->getPost('id_product'),
+        'name' => $this->request->getPost('name'),
+        'description' => $this->request->getPost('description'),
+        'status' => $this->request->getPost('status'),
+    ];
+
+        if ($productModel->update($id, $data)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Produk berhasil diperbarui']);
+        } else {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Gagal memperbarui produk']);
         }
-
-        return redirect()->back()->withInput()->with('error', 'Gagal memperbarui produk');
     }
 
     public function delete($id)
     {
-        if ($this->productModel->delete($id)) {
-            return $this->respondDeleted(['message' => 'Produk berhasil dihapus']);
-        }
+        $productModel = new ProductModel();
 
-        return $this->fail('Gagal menghapus produk');
+        if ($productModel->delete($id)) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Produk berhasil dihapus']);
+        } else {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Gagal menghapus produk']);
+        }
     }
 }

@@ -24,6 +24,9 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
+
+<script src="<?= base_url('assets/js/submitData.js') ?>"></script>
+
 <script>
     function editPipeline(row) {
         return openModal('edit', 'pipeline/edit/' + row.id)
@@ -66,49 +69,5 @@
         });
     }
 
-    // Submit
-    // **PENTING: Tambahin Event Listener Setelah Load**
-    const form = document.getElementById("modal-content");
-    if (form) {
-        form.addEventListener("submit", function(event) {
-            event.preventDefault(); // Stop submit default
-
-            Swal.fire({
-                title: "Yakin Simpan?",
-                text: "Pastikan data sudah benar.",
-                icon: "question",
-                showCancelButton: true,
-                confirmButtonText: "Ya, Simpan!",
-                cancelButtonText: "Batal"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    let formData = new FormData(event.target);
-
-                    fetch(event.target.action, {
-                            method: event.target.method,
-                            body: formData
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            closeModal()
-                            Swal.fire({
-                                title: data.status === 'success' ? "Berhasil!" : "Gagal!",
-                                text: data.message,
-                                icon: data.status === 'success' ? "success" : "error"
-                            }).then(() => {
-                                if (data.status === 'success') {
-                                    // location.reload(); // Refresh tabel
-                                    $('#pipelineTable').DataTable().ajax.reload(null, false); // Reload data di DataTables tanpa reset halaman
-                                }
-                            });
-                        })
-                        .catch(error => {
-                            Swal.fire("Error!", "Terjadi kesalahan, coba lagi.", "error");
-                            console.error("Error:", error);
-                        });
-                }
-            });
-        });
-    }
 </script>
 <?= $this->endSection() ?>

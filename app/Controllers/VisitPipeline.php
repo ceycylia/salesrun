@@ -2,13 +2,14 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Controller;
 use App\Models\PipelineModel;
+use CodeIgniter\HTTP\Request;
 use App\Models\VisitPipelineModel;
 use App\Services\DataTableService;
-use CodeIgniter\Controller;
 use CodeIgniter\API\ResponseTrait;
-use CodeIgniter\HTTP\Request;
 
+use App\Controllers\BaseController;
 use function PHPUnit\Framework\throwException;
 
 class VisitPipeline extends BaseController
@@ -47,7 +48,7 @@ class VisitPipeline extends BaseController
 
         // dd($products);
         return view('pages/visit_pipeline/form', [
-            'action' => base_url('/pipeline/visit/store'),
+            'action' =>  '/pipeline/visit/store',
             'pipelines' => $pipelines,
             'products' => $products // Kirim ke view
         ]);
@@ -55,7 +56,12 @@ class VisitPipeline extends BaseController
 
     public function editForm($id)
     {
-        $data = $this->visitPipelineModel->find($id);
+        $data = $this->visitPipelineModel
+            ->select('visit_pipelines.*, pipelines.name as pipeline_name, pipelines.potential as pipeline_potential, pipelines.address as pipeline_address')
+            ->join('pipelines', 'pipelines.id = visit_pipelines.pipeline_id', 'left')
+            ->where('visit_pipelines.id', $id)
+            ->first(); // Gunakan first() agar langsung dapat satu data
+
         $productModel = new \App\Models\ProductModel(); // Pastikan model dipanggil
         $products = $productModel->getProductDropdown(); // Ambil produk aktif
         $pipelines = $this->pipelineModel->select('id, name')->findAll();
@@ -70,6 +76,91 @@ class VisitPipeline extends BaseController
         ]);
     }
 
+    // ✅ Simpan data visit pipeline baru
+    public function store()
+    {
+        $pipeline_id = $this->request->getPost('pipeline_id');
+
+        // Validasi pipeline ID
+        $pipelineExists = $this->pipelineModel->where('id', $pipeline_id)->first();
+
+        if (!$pipelineExists) {
+            return redirect()->back()->withInput()->with('error', 'Pipeline ID tidak valid!');
+        }
+
+        $data = [
+            'pipeline_id'       => $pipeline_id,
+            'date_visit'        => $this->request->getPost('date_visit'),
+            'location_visit'    => $this->request->getPost('location_visit'),
+            'product_id'        => $this->request->getPost('product_id'),
+            'prospect_visit'    => $this->request->getPost('prospect_visit'),
+            'closing_plan'      => $this->request->getPost('closing_plan'),
+            'status'            => $this->request->getPost('status'),
+            'coment'            => $this->request->getPost('coment'),
+            'status_closing'    => (int) $this->request->getPost('status_closing'),
+
+        ];
+
+        if ($this->visitPipelineModel->save($data)) {
+            return $this->response->setJSON([
+                'status' => 'success',
+                'message' => 'Data berhasil disimpan!'
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Gagal menyimpan data.'
+            ]);
+        }
+    }
+
+    // ✅ Simpan data untuk update visit pipeline 
+    public function update($id)
+    {
+        $pipeline_id = $this->request->getPost('pipeline_id');
+
+        // Validasi pipeline ID
+        $pipelineExists = $this->pipelineModel->where('id', $pipeline_id)->first();
+
+        if (!$pipelineExists) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Pipeline ID tidak Valid!'
+            ]);
+        }
+
+        $data = [
+            'pipeline_id'       => $pipeline_id,
+            'date_visit'        => $this->request->getPost('date_visit'),
+            'location_visit'    => $this->request->getPost('location_visit'),
+            'product_id'        => $this->request->getPost('product_id'),
+            'prospect_visit'    => $this->request->getPost('prospect_visit'),
+            'closing_plan'      => $this->request->getPost('closing_plan'),
+            'status'            => $this->request->getPost('status'),
+            'coment'            => $this->request->getPost('coment'),
+            'status_closing'    => (int) $this->request->getPost('status_closing'),
+        ];
+
+
+        if ($this->visitPipelineModel->update($id, $data)) { //sebelum nya error ngga? iyaa error, tp kalo rehan liat, dia masuk ke index, kalo ya dia error tp masuk
+            return $this->response->setJSON([
+                'status' => 'success',
+                'message' => 'Data berhasil disimpan!'
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Gagal menyimpan data.'
+            ]);
+        }
+    }
+
+
+    // ✅ Return data untuk DataTables
+    public function visitPipelineData()
+    {
+        return $this->response->setJSON($this->dataTableService->getDataTable('visitPipeline')->generateJson());
+    }
 
     // Fetch semua pipeline untuk dropdown
     public function getPipelines()
@@ -100,44 +191,5 @@ class VisitPipeline extends BaseController
             'potential' => $pipeline['potential'] ?? 'Data tidak tersedia',
             'address' => $pipeline['address'] ?? 'Data tidak tersedia'
         ]);
-    }
-
-    // ✅ Return data untuk DataTables
-    public function visitPipelineData()
-    {
-        return $this->response->setJSON($this->dataTableService->getDataTable('visitPipeline')->generateJson());
-    }
-
-    // ✅ Simpan data visit pipeline baru
-    public function store()
-    {
-        $pipeline_id = $this->request->getPost('pipeline_id');
-
-        // Validasi pipeline ID
-        $pipelineExists = $this->pipelineModel->where('id', $pipeline_id)->first();
-
-        if (!$pipelineExists) {
-            return redirect()->back()->withInput()->with('error', 'Pipeline ID tidak valid!');
-        }
-
-        $data = [
-            'pipeline_id'       => $pipeline_id,
-            'date_visit'        => $this->request->getPost('date_visit'),
-            'location_visit'    => $this->request->getPost('location_visit'),
-            'product_potential' => $this->request->getPost('product_potential'),
-            'product_id'        => $this->request->getPost('product_id'),
-            'prospect_visit'    => $this->request->getPost('prospect_visit'),
-            'closing_plan'      => $this->request->getPost('closing_plan'),
-            'status'            => $this->request->getPost('status'),
-            'coment'            => $this->request->getPost('coment'),
-            'status_closing'    => (int) $this->request->getPost('status_closing'),
-
-        ];
-
-        if ($this->visitPipelineModel->save($data)) {
-            return redirect()->to('/pipeline/visit')->with('success', 'Data berhasil disimpan!');
-        } else {
-            return redirect()->back()->withInput()->with('error', 'Gagal menyimpan data.');
-        }
     }
 }

@@ -65,7 +65,7 @@ class PipelineModel extends Model
     }
 
     // ✅ Tambahin function baru buat ambil ID & Name doang
-    public function getPipelines()
+    public function getPipelines() 
     {
         return $this->select('id, name')->findAll();  // Ganti pipeline_name jadi name
 
